@@ -1,0 +1,16 @@
+[
+  {
+    "infinitive": "go",
+    "pastSimple": "went",
+    "pastParticiple": "gone",
+    "translation": "идти",
+    "image": "go.png"
+  },
+  {
+    "infinitive": "eat",
+    "pastSimple": "ate",
+    "pastParticiple": "eaten",
+    "translation": "есть",
+    "image": "eat.png"
+  }
+]
