@@ -2,10 +2,13 @@
 {
 	public class IrregularVerb
 	{
-		public string Infinitive { get; set; }
-		public string PastSimple { get; set; }
-		public string PastParticiple { get; set; }
-		public string Translation { get; set; }
-		public string Image { get; set; }
+		public string Russian { get; set; }
+		public string Forms { get; set; }
+
+		public IrregularVerb(string russian, string forms)
+		{
+			Russian = russian;
+			Forms = forms;
+		}
 	}
 }

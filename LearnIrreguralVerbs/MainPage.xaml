@@ -1,26 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LearnIrreguralVerbs.MainPage">
 
-    <ScrollView>
-        <ListView x:Name="VerbsListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="10">
-                            <Image Source="{Binding Image}" WidthRequest="50" HeightRequest="50"/>
-                            <StackLayout>
-                                <Label Text="{Binding Infinitive}" FontSize="20"/>
-                                <Label Text="{Binding PastSimple}" FontSize="18"/>
-                                <Label Text="{Binding PastParticiple}" FontSize="18"/>
-                                <Label Text="{Binding Translation}" FontSize="16" TextColor="Gray"/>
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ScrollView>
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- Verb in russian -->
+        <Label x:Name="VerbLabel"
+               Text="Click on 'New verb'"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <!-- input field -->
+        <Entry x:Name="InputEntry"
+               Placeholder="Enter 3 forms separated by a space"
+               FontSize="18"
+               />
+        <!--    TextChanged="OnTextChanged"-->
+
+        <!-- generate new verb button -->
+        <Button Text="New verb"
+                Clicked="OnNewVerbClicked" />
+
+        <!-- Answer check button -->
+        <Button Text="Check"
+                Clicked="OnCheckAnswerClicked" />
+
+        <!-- Result message -->
+        <Label x:Name="ResultLabel"
+               FontSize="18"
+               TextColor="Green"
+               HorizontalOptions="Center"
+               IsVisible="False" />
+
+    </VerticalStackLayout>
 
 </ContentPage>
